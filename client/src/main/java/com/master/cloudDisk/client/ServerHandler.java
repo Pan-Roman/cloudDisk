@@ -37,7 +37,7 @@ public class ServerHandler implements IServerHandler {
     private IClient client;
     private String host;
     private Integer port;
-    // Network
+    // Network // DiscardServer разобран в Lesson3 1:10
 //    private Socket socket;
 //    private DataOutputStream out;
 //    private Scanner in;
@@ -110,6 +110,14 @@ public class ServerHandler implements IServerHandler {
             try {
                 System.out.println("first try");
                 Bootstrap clientBootstrap = new Bootstrap();
+//                clientBootstrap.group(group);
+//                clientBootstrap.channel(NioSocketChannel.class);
+//                clientBootstrap.remoteAddress(new InetSocketAddress("localhost", 8189));
+//                clientBootstrap.handler(new ChannelInitializer<SocketChannel>() {
+//                    protected void initChannel(SocketChannel socketChannel) throws Exception {
+//                        socketChannel.pipeline().addLast(new AuthHandler());
+//                    }
+//                });
                 clientBootstrap
                         .group(group)
                         .channel(NioSocketChannel.class)
@@ -117,9 +125,9 @@ public class ServerHandler implements IServerHandler {
                         .handler(new ChannelInitializer<SocketChannel>() {
                             protected void initChannel(SocketChannel socketChannel) throws Exception {
                                 socketChannel.pipeline().addLast(
-                                        new ObjectDecoder(MAX_OBJ_SIZE, ClassResolvers.cacheDisabled(null)),
-                                        new ObjectEncoder()
-//                                        new AuthHandler() // (actionAfterAuth)
+//                                        new ObjectDecoder(MAX_OBJ_SIZE, ClassResolvers.cacheDisabled(null)),
+//                                        new ObjectEncoder(),
+                                        new AuthHandler() // (actionAfterAuth)
                                 );
                                 initialized = true;
                                 currentChannel = socketChannel;

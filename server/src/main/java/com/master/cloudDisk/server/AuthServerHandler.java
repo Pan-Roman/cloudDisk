@@ -14,7 +14,7 @@ public class AuthServerHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        System.out.println("Пришло сообщение");
+        System.out.println("We have message.");
         if(msg instanceof AuthCommand){
             AuthCommand cmd = (AuthCommand) msg;
             System.out.println("We have Auth object! - " + cmd.getLogin());
@@ -36,6 +36,7 @@ public class AuthServerHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         System.out.println("channelActive");
+        super.channelActive(ctx);
     }
 
     @Override

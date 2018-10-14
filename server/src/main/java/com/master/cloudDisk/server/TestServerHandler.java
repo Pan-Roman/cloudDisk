@@ -11,6 +11,7 @@ public class TestServerHandler extends ChannelInboundHandlerAdapter {
 //public class TestServerHandler extends SimpleChannelInboundHandler {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+        System.out.println("We have new MESSAGE!!!");
         if(null == msg){
             System.out.println("NULL MESSAGE");
             return;
@@ -33,7 +34,7 @@ public class TestServerHandler extends ChannelInboundHandlerAdapter {
             ctx.fireChannelRead(msg); // Передача сообщения дальше по конвейеру. Если не вызвать - конвейер прервётся на этом обработчике.
 
         }
-
+        ctx.write("Answer!!!!");
         // Завершение работы
         ((ByteBuf) msg).release(); // Освобождает буфер. Дальнейшая обработка запроса (НЕ?) происходит?
 //        ctx.write(str); // Запись сообщения для отправки

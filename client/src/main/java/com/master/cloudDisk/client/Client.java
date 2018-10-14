@@ -19,8 +19,24 @@ public class Client extends Application implements IClient {
         primaryStage.setScene(new Scene(root, 550, 400));
         primaryStage.show();
 
-        ServerHandler sh = ServerHandler.getInstance();
-        sh.sendCommand(new AuthCommand("login", "password"));
+//        ServerHandler sh = ServerHandler.getInstance();
+//        sh.sendCommand(new AuthCommand("login", "password"));
+
+        Thread thread = new Thread(new Runnable() {
+            public void run() {
+                Net.getInstance().start();
+            }
+        });
+        thread.start();
+        try {
+            Thread.sleep(5000);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        Net.getInstance().sendData("My message!!!!!");
+        Net.getInstance().sendData("My message!!!!!");
+        Net.getInstance().getCurrentChannel().writeAndFlush("My 2 message!!!!!");
+
 
 //        serverHandler.sendCommand("Privet! ");
         // Клиент на Netty Lesson3(1.53)
