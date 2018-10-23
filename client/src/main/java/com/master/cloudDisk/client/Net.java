@@ -14,17 +14,25 @@ import io.netty.handler.codec.serialization.ObjectEncoder;
 
 import static com.master.cloudDisk.common.Command.MAX_OBJ_SIZE;
 
-public class Net {
+public class Net extends Thread implements Runnable{
     private static Net instance = new Net();
 
     public static Net getInstance(){return instance;}
-    private Net(){}
+    private Net(){
+        super("Net");
+        start();
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 
     private Channel currentChannel;
 
     public Channel getCurrentChannel(){return currentChannel;}
 
-    public void start(){
+    public void run(){
         EventLoopGroup group = new NioEventLoopGroup();
         try{
             Bootstrap btstrp = new Bootstrap();
@@ -57,7 +65,7 @@ public class Net {
         System.out.println("Send MESSAGE!");
         if(isConnected()) {
             currentChannel.writeAndFlush(data);
-            currentChannel.write("My two message");
+//            currentChannel.write("My two message");
         }else{
             System.out.println("Net doesn't conected!");
         }

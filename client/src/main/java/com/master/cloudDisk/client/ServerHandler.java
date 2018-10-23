@@ -27,12 +27,11 @@ import java.util.Scanner;
 
 import static com.master.cloudDisk.common.Command.MAX_OBJ_SIZE;
 
-public class ServerHandler implements IServerHandler {
+public class ServerHandler extends Thread implements Runnable, IServerHandler {
     private static final String DEFAULT_HOST = "localhost";
     private static final Integer DEFAULT_PORT = 8189;
     // Instance
     private static ServerHandler instance;
-    private boolean initialized = false;
     // Network config
     private IClient client;
     private String host;
@@ -46,7 +45,6 @@ public class ServerHandler implements IServerHandler {
     public static ServerHandler getInstance() {
         if(null == instance){
             instance = new ServerHandler();
-//            instance.init();
         }
         return instance;
     }
@@ -54,19 +52,19 @@ public class ServerHandler implements IServerHandler {
     public boolean sendCommand(ICommand command) {
         try {
 //            this.getOut().write(65);
-            ChannelFuture cf = getCurrentChannel().write(command);
+//            ChannelFuture cf = getCurrentChannel().write(command);
+            ChannelFuture cf = getCurrentChannel().writeAndFlush(command);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         // TODO: Send command.
-        System.out.println("Не реализованна отправка команды!");
+//        System.out.println("Не реализованна отправка команды!");
         return true;
     }
 
     public boolean sendFile(String fileName) {
-        init();
         System.out.println("Не реализована отправка файла!");
         // Читаем файл
         /// ...
@@ -81,7 +79,6 @@ public class ServerHandler implements IServerHandler {
     }
 
     public Channel getCurrentChannel() {
-        init();
         return currentChannel;
     }
 
@@ -98,26 +95,22 @@ public class ServerHandler implements IServerHandler {
     }
 
     private ServerHandler() {
+        super("ServerHandler");
         this.client = null;
         this.host = DEFAULT_HOST;
         this.port = DEFAULT_PORT;
+        start();
+        try {
+            Thread.currentThread().sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
-    private void init(){
-        System.out.println("Before init.");
-        if(!initialized) {
+    public void run(){
             EventLoopGroup group = new NioEventLoopGroup();
             try {
-                System.out.println("first try");
                 Bootstrap clientBootstrap = new Bootstrap();
-//                clientBootstrap.group(group);
-//                clientBootstrap.channel(NioSocketChannel.class);
-//                clientBootstrap.remoteAddress(new InetSocketAddress("localhost", 8189));
-//                clientBootstrap.handler(new ChannelInitializer<SocketChannel>() {
-//                    protected void initChannel(SocketChannel socketChannel) throws Exception {
-//                        socketChannel.pipeline().addLast(new AuthHandler());
-//                    }
-//                });
                 clientBootstrap
                         .group(group)
                         .channel(NioSocketChannel.class)
@@ -125,19 +118,15 @@ public class ServerHandler implements IServerHandler {
                         .handler(new ChannelInitializer<SocketChannel>() {
                             protected void initChannel(SocketChannel socketChannel) throws Exception {
                                 socketChannel.pipeline().addLast(
-//                                        new ObjectDecoder(MAX_OBJ_SIZE, ClassResolvers.cacheDisabled(null)),
-//                                        new ObjectEncoder(),
+                                        new ObjectDecoder(MAX_OBJ_SIZE, ClassResolvers.cacheDisabled(null)),
+                                        new ObjectEncoder(),
                                         new AuthHandler() // (actionAfterAuth)
                                 );
-                                initialized = true;
                                 currentChannel = socketChannel;
                             }
                         });
-                System.out.println("After bootstrap!");
                 ChannelFuture channelFuture = clientBootstrap.connect().sync();
-                System.out.println("After bootstrap 2!");
                 channelFuture.channel().closeFuture().sync();
-                System.out.println("After bootstrap 3!");
             } catch (Exception e) {
                 e.printStackTrace();
             } finally {
@@ -147,16 +136,12 @@ public class ServerHandler implements IServerHandler {
                 }catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                System.out.println("END Finally init!!");
+                System.out.println("END Finally!!");
             }
-        }
-        System.out.println("After init !!");
     }
 
-
-
-
-
+    public boolean isConnected(){return currentChannel != null && currentChannel.isActive();}
+    public void closeConnection(){currentChannel.close();}
 
 
 //    private void onGetMessage (Object message) {
@@ -165,32 +150,4 @@ public class ServerHandler implements IServerHandler {
 //        }
 //    }
 
-
-
-
-
-
-
-
-//    private Socket getSocket() throws IOException {
-//        if(this.socket == null){
-//            this.socket = this.getSocket() ;
-//        }
-//        return this.socket;
-//    }
-//
-//    private Scanner getIn() throws IOException {
-//        if(this.in == null){
-//            this.in = new Scanner(this.getSocket().getInputStream());
-//        }
-//        return this.in;
-//    }
-//
-//    private DataOutputStream getOut() throws IOException {
-//        if(this.out == null){
-//                Socket socket = new Socket(this.host, this.port) ;
-//                this.out = new DataOutputStream(socket.getOutputStream());
-//        }
-//        return this.out;
-//    }
 }
