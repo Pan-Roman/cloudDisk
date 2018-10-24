@@ -3,10 +3,7 @@ package com.master.cloudDisk.client;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TreeItem;
-import javafx.scene.control.TreeView;
+import javafx.scene.control.*;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -46,6 +43,11 @@ public class Controller implements Initializable{
 
     public void test(ActionEvent event){
         System.out.println("DROP: " + event.toString());
+    }
+    public void test2(ActionEvent event){
+//        System.out.println("TEST2: ");
+//        event.
+        System.out.println("TEST2: " + event.toString());
     }
 
 

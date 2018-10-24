@@ -18,8 +18,9 @@ public class Client extends Application implements IClient {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("/Scene.fxml"));
         primaryStage.setTitle("Cloud Disk");
-        primaryStage.setScene(new Scene(root, 550, 400));
+        primaryStage.setScene(new Scene(root, 700, 500));
         primaryStage.show();
+        String userHome = System.getProperty("user.home");
 
 //        ServerHandler sh = ServerHandler.getInstance();
 //        sh.sendCommand(new AuthCommand("login", "password"));
