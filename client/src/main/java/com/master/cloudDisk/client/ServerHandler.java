@@ -19,30 +19,23 @@ import io.netty.handler.codec.serialization.ClassResolvers;
 import io.netty.handler.codec.serialization.ObjectDecoder;
 import io.netty.handler.codec.serialization.ObjectEncoder;
 
-import java.io.DataOutputStream;
-import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.net.Socket;
-import java.util.Scanner;
 
 import static com.master.cloudDisk.common.Command.MAX_OBJ_SIZE;
 
 public class ServerHandler extends Thread implements Runnable, IServerHandler {
+    private IClient client;
     private static final String DEFAULT_HOST = "localhost";
     private static final Integer DEFAULT_PORT = 8189;
     // Instance
     private static ServerHandler instance;
     // Network config
-    private IClient client;
     private String host;
     private Integer port;
     // Network // DiscardServer разобран в Lesson3 1:10
-//    private Socket socket;
-//    private DataOutputStream out;
-//    private Scanner in;
     private Channel currentChannel;
 
-    public static ServerHandler getInstance() {
+    public static IServerHandler getInstance() {
         if(null == instance){
             instance = new ServerHandler();
         }
@@ -50,23 +43,21 @@ public class ServerHandler extends Thread implements Runnable, IServerHandler {
     }
 
     public boolean sendCommand(ICommand command) {
+        connect();
         try {
-//            this.getOut().write(65);
-//            ChannelFuture cf = getCurrentChannel().write(command);
             ChannelFuture cf = getCurrentChannel().writeAndFlush(command);
-
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        // TODO: Send command.
-//        System.out.println("Не реализованна отправка команды!");
         return true;
     }
 
     public boolean sendFile(String fileName) {
+        connect();
         System.out.println("Не реализована отправка файла!");
+
         // Читаем файл
+        // Работа с файлами через nio - Lesson 2 (50:00)
         /// ...
         // TODO: Send File
         byte [] arr = fileName.getBytes(); // Сюда надо запихать набор байт из файла а не байты имени файла
@@ -82,8 +73,8 @@ public class ServerHandler extends Thread implements Runnable, IServerHandler {
         return currentChannel;
     }
 
-    public void setClient(IClient client) {
-        this.client = client;
+    public void setClient(IClient _client) {
+        client = _client;
     }
 
     public void setHost(String host) {
@@ -96,14 +87,24 @@ public class ServerHandler extends Thread implements Runnable, IServerHandler {
 
     private ServerHandler() {
         super("ServerHandler");
-        this.client = null;
         this.host = DEFAULT_HOST;
         this.port = DEFAULT_PORT;
-        start();
-        try {
-            Thread.currentThread().sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+//        start();
+//        try {
+//            Thread.currentThread().sleep(1000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+    }
+
+    private void connect(){
+        if(!isConnected()) {
+            start();
+            try {
+                Thread.currentThread().sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -120,7 +121,8 @@ public class ServerHandler extends Thread implements Runnable, IServerHandler {
                                 socketChannel.pipeline().addLast(
                                         new ObjectDecoder(MAX_OBJ_SIZE, ClassResolvers.cacheDisabled(null)),
                                         new ObjectEncoder(),
-                                        new AuthHandler() // (actionAfterAuth)
+                                        new MainOutClientHandler(),
+                                        new MainInClientHandler(client)
                                 );
                                 currentChannel = socketChannel;
                             }
@@ -141,13 +143,11 @@ public class ServerHandler extends Thread implements Runnable, IServerHandler {
     }
 
     public boolean isConnected(){return currentChannel != null && currentChannel.isActive();}
-    public void closeConnection(){currentChannel.close();}
 
-
-//    private void onGetMessage (Object message) {
-//        if(null != client) {
-//            this.client.onGetMessage(message);
-//        }
-//    }
+    public void closeConnection(){
+        if(isConnected()){
+            currentChannel.close();
+        }
+    }
 
 }

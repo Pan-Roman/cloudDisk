@@ -5,6 +5,7 @@ import com.master.cloudDisk.common.Interfaces.ICommand;
 import java.io.Serializable;
 
 public class AuthCommand implements ICommand, Serializable {
+    public final static String salt = "SuPer_SaLt!";
     private String login;
     private String password;
 

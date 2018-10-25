@@ -1,6 +1,7 @@
 package com.master.cloudDisk.server;
 
 import com.master.cloudDisk.common.AuthCommand;
+import com.master.cloudDisk.common.ServerAnswers;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
@@ -19,7 +20,11 @@ public class AuthServerHandler extends ChannelInboundHandlerAdapter {
             AuthCommand cmd = (AuthCommand) msg;
             System.out.println("We have Auth object! - " + cmd.getLogin());
             if(Repository.checkAuthData(cmd.getLogin(), cmd.getPassword())){
+                System.out.println("Auth OK!");
+                ctx.writeAndFlush(ServerAnswers.AUTH_OK);
                 ctx.pipeline().remove(this).addLast(handlerAfterAuth);
+            }else{
+                System.out.println("Error Auth!");
             }
         }else{
             System.out.println("We have wrong object!");
