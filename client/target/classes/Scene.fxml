@@ -17,7 +17,7 @@
       <TreeView fx:id="pathTree" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
    </left>
    <center>
-      <TableView fx:id="pathTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="pathTable" onDragDropped="#setOnDragDropped" onDragOver="#setOnDragOver" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <columns>
           <TableColumn prefWidth="75.0" text="Name" />
           <TableColumn prefWidth="75.0" text="Size" />

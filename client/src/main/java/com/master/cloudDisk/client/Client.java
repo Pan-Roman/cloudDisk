@@ -13,18 +13,41 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class Client extends Application implements IClient {
-    private IServerHandler serverHandler;
+    static public String MAIN_PATH_NAME = "CloudDisk";
 
+    private IServerHandler serverHandler;
+    private Controller controller;
+    private String mainPath;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/Scene.fxml"));
-        primaryStage.setTitle("Cloud Disk");
-        primaryStage.setScene(new Scene(root, 700, 500));
-        primaryStage.show();
-        String userHome = System.getProperty("user.home");
+//        Settings.load();
 
+        primaryStage.setTitle("DownloadFX");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Scene.fxml"));
+
+        try{
+            Parent root = (Parent)loader.load();
+            controller = loader.getController();
+//            controller.setStage(mainStage);
+            primaryStage.setTitle("Cloud Disk");
+            primaryStage.setScene(new Scene(root, 700, 500));
+            primaryStage.show();
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+
+//        String userHome = System.getProperty("user.home") + "\\";
+//        String userHome = getMainPath();
+//        System.out.println("USER_HOME: " + userHome);
         // Клиент на Netty Lesson3(1.53)
+    }
+
+    public String getMainPath(){
+        if(null == mainPath){
+            mainPath = System.getProperty("user.home") + "\\" + MAIN_PATH_NAME;
+        }
+        return mainPath;
     }
 
     @Override
@@ -68,6 +91,17 @@ public class Client extends Application implements IClient {
         switch (msg){
             case AUTH_OK:
                 System.out.println("Auth OKKKKK!!");
+                if(null != controller){
+                    if(null != controller.AuthBox) {
+
+                        controller.AuthBox.setVisible(false);
+                    }else{
+                        System.out.println("AuthBox!!!!----");
+                    }
+                }else {
+                    System.out.println("controller---");
+                }
+
                 break;
             default:
                 System.out.println("We have some answer from Server!");

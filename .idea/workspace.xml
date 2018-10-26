@@ -3,39 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="ca5e344f-c519-4f61-9e2c-d8a361b7e2fe" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/client/client.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/AuthHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/MainOutClientHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/Interfaces/IClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/Interfaces/IServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/Interfaces/IServerHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/MyTestClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/Net.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/Net.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/ServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/ServerHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/resources/Scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/Scene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/target/classes/Scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/Scene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/target/classes/com/master/cloudDisk/client/AuthHandler.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/target/classes/com/master/cloudDisk/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/com/master/cloudDisk/client/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/target/classes/com/master/cloudDisk/client/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/com/master/cloudDisk/client/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/target/classes/com/master/cloudDisk/client/Interfaces/IClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/com/master/cloudDisk/client/Interfaces/IClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/target/classes/com/master/cloudDisk/client/Interfaces/IServerHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/com/master/cloudDisk/client/Interfaces/IServerHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/target/classes/com/master/cloudDisk/client/MyTestClient.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/target/classes/com/master/cloudDisk/client/ServerHandler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/com/master/cloudDisk/client/ServerHandler$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/target/classes/com/master/cloudDisk/client/ServerHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/com/master/cloudDisk/client/ServerHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudDisk.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudDisk.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/common/common.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/main/java/com/master/cloudDisk/common/AuthCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/main/java/com/master/cloudDisk/common/AuthCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/master/cloudDisk/common/AuthCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/master/cloudDisk/common/AuthCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/master/cloudDisk/server/AuthServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/master/cloudDisk/server/AuthServerHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/master/cloudDisk/server/MainServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/master/cloudDisk/server/MainServerHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/master/cloudDisk/server/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/master/cloudDisk/server/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/master/cloudDisk/server/AuthServerHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/master/cloudDisk/server/AuthServerHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/master/cloudDisk/server/MainServerHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/master/cloudDisk/server/MainServerHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/master/cloudDisk/server/Repository.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/master/cloudDisk/server/Repository.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/client/target/" />
     <ignored path="$PROJECT_DIR$/common/target/" />
@@ -53,96 +31,12 @@
       <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1">
-              <caret line="24" column="58" lean-forward="true" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
+            <state relative-caret-position="-34">
+              <caret line="80" column="46" lean-forward="true" selection-start-line="80" selection-start-column="46" selection-end-line="80" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2179#2180#0" expanded="true" />
-                <element signature="e#2207#2208#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServerHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/ServerHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="37" column="27" lean-forward="true" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2513#2514#0" expanded="true" />
-                <element signature="e#2550#2551#0" expanded="true" />
-                <element signature="e#2583#2584#0" expanded="true" />
-                <element signature="e#2614#2615#0" expanded="true" />
-                <element signature="e#2631#2632#0" expanded="true" />
-                <element signature="e#2663#2664#0" expanded="true" />
-                <element signature="e#2704#2705#0" expanded="true" />
-                <element signature="e#2736#2737#0" expanded="true" />
-                <element signature="e#3805#4419#0" expanded="true" />
-                <element signature="e#4418#4419#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IServerHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/Interfaces/IServerHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/Interfaces/IClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="28" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainInClientHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/MainInClientHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#501#502#0" expanded="true" />
-                <element signature="e#532#533#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServerAnswers.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/main/java/com/master/cloudDisk/common/ServerAnswers.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainOutClientHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/MainOutClientHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="10" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#2014#2015#0" expanded="true" />
+                <element signature="e#2042#2043#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -151,69 +45,56 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+            <state relative-caret-position="169">
+              <caret line="84" column="55" lean-forward="true" selection-start-line="84" selection-start-column="55" selection-end-line="84" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Clipboard.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/scene/input/Clipboard.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="394" column="24" selection-start-line="394" selection-start-column="24" selection-end-line="394" selection-end-column="24" />
               <folding>
-                <element signature="e#382#390#0" expanded="true" />
+                <element signature="e#15430#15431#0" expanded="true" />
+                <element signature="e#15494#15495#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/com/master/cloudDisk/server/Server.java">
+      <file leaf-file-name="ServerHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/ServerHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="35" column="72" selection-start-line="35" selection-start-column="72" selection-end-line="35" selection-end-column="72" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainServerHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/com/master/cloudDisk/server/MainServerHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="19" selection-end-column="9" />
-              <folding>
-                <element signature="e#289#290#0" expanded="true" />
-                <element signature="e#353#354#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthServerHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/com/master/cloudDisk/server/AuthServerHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="23" column="57" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
+            <state relative-caret-position="1411">
+              <caret line="107" column="9" lean-forward="true" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2583#2584#0" expanded="true" />
+                <element signature="e#2615#2616#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Repository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/com/master/cloudDisk/server/Repository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Scene.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/main/resources/Scene.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="50" column="28" lean-forward="true" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="19" column="60" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
             </state>
           </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
     </leaf>
@@ -232,6 +113,7 @@
       <find>Send MESSAGE!!!</find>
       <find>Net doesn't conected!</find>
       <find>PassField</find>
+      <find>setOnDragOver</find>
     </findStrings>
     <dirStrings>
       <dir>D:\!Learning\GeekUnivers\cloudDisk</dir>
@@ -264,7 +146,6 @@
         <option value="$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/ServerHandler2.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/com/master/cloudDisk/server/Server.java" />
         <option value="$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/Net.java" />
-        <option value="$PROJECT_DIR$/client/src/main/resources/Scene.fxml" />
         <option value="$PROJECT_DIR$/common/main/java/com/master/cloudDisk/common/AuthCommand.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/com/master/cloudDisk/server/Repository.java" />
         <option value="$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/AuthHandler.java" />
@@ -275,10 +156,11 @@
         <option value="$PROJECT_DIR$/common/main/java/com/master/cloudDisk/common/ServerAnswers.java" />
         <option value="$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/Interfaces/IClient.java" />
         <option value="$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/MainInClientHandler.java" />
-        <option value="$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/ServerHandler.java" />
         <option value="$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/Interfaces/IServerHandler.java" />
-        <option value="$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/Controller.java" />
+        <option value="$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/ServerHandler.java" />
         <option value="$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/Client.java" />
+        <option value="$PROJECT_DIR$/client/src/main/resources/Scene.fxml" />
+        <option value="$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/Controller.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
@@ -477,12 +359,12 @@
       <workItem from="1540114198516" duration="9231000" />
       <workItem from="1540155089341" duration="4000" />
       <workItem from="1540249114736" duration="4336000" />
-      <workItem from="1540410190256" duration="12798000" />
+      <workItem from="1540410190256" duration="23029000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102945000" />
+    <option name="totallyTimeSpent" value="113176000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="722" extended-state="6" />
@@ -490,16 +372,16 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32994923" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.4111675" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.23350254" />
       <window_info anchor="right" id="Maven Projects" order="5" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.47715735" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.56006765" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.4111675" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.40609136" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19213313" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34114978" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3993232" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -526,34 +408,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/master/cloudDisk/server/MainServerHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="57" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/master/cloudDisk/server/Repository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="18" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/main/java/com/master/cloudDisk/common/WriteFileCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="50" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/MainOutClientHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/main/java/com/master/cloudDisk/common/ServerAnswers.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -584,8 +438,8 @@
           <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2179#2180#0" expanded="true" />
-            <element signature="e#2207#2208#0" expanded="true" />
+            <element signature="e#2014#2015#0" expanded="true" />
+            <element signature="e#2042#2043#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -669,8 +523,8 @@
           <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2179#2180#0" expanded="true" />
-            <element signature="e#2207#2208#0" expanded="true" />
+            <element signature="e#2014#2015#0" expanded="true" />
+            <element signature="e#2042#2043#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1006,44 +860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/ServerHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="27" lean-forward="true" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2513#2514#0" expanded="true" />
-            <element signature="e#2550#2551#0" expanded="true" />
-            <element signature="e#2583#2584#0" expanded="true" />
-            <element signature="e#2614#2615#0" expanded="true" />
-            <element signature="e#2631#2632#0" expanded="true" />
-            <element signature="e#2663#2664#0" expanded="true" />
-            <element signature="e#2704#2705#0" expanded="true" />
-            <element signature="e#2736#2737#0" expanded="true" />
-            <element signature="e#3805#4419#0" expanded="true" />
-            <element signature="e#4418#4419#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/main/resources/Scene.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="50" column="28" lean-forward="true" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-          <folding>
-            <element signature="e#382#390#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/src/main/java/com/master/cloudDisk/server/Server.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
@@ -1064,22 +880,81 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/jre/lib/rt.jar!/java/lang/Object.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/scene/Parent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="80" column="22" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/resources/Scene.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="19" column="60" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="24" column="58" lean-forward="true" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
+        <state relative-caret-position="-34">
+          <caret line="80" column="46" lean-forward="true" selection-start-line="80" selection-start-column="46" selection-end-line="80" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2179#2180#0" expanded="true" />
-            <element signature="e#2207#2208#0" expanded="true" />
+            <element signature="e#2014#2015#0" expanded="true" />
+            <element signature="e#2042#2043#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/jre/lib/rt.jar!/java/io/File.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/ServerHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1411">
+          <caret line="107" column="9" lean-forward="true" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2583#2584#0" expanded="true" />
+            <element signature="e#2615#2616#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/scene/input/Clipboard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="394" column="24" selection-start-line="394" selection-start-column="24" selection-end-line="394" selection-end-column="24" />
+          <folding>
+            <element signature="e#15430#15431#0" expanded="true" />
+            <element signature="e#15494#15495#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/java/com/master/cloudDisk/client/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="84" column="55" lean-forward="true" selection-start-line="84" selection-start-column="55" selection-end-line="84" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        <state relative-caret-position="119">
+          <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>

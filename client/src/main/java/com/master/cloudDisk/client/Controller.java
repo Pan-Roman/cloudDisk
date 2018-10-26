@@ -6,6 +6,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.input.DataFormat;
+import javafx.scene.input.DragEvent;
+import javafx.scene.input.Dragboard;
+import javafx.scene.input.TransferMode;
 import javafx.scene.layout.HBox;
 
 import java.net.URL;
@@ -62,6 +66,34 @@ public class Controller implements Initializable{
         ServerHandler.getInstance().sendCommand(message);
     }
 
+    // Перетаскиваем с зажатой мышкой (до бросания)
+    public void setOnDragOver(DragEvent dragEvent) {
+//        System.out.println("dragEvent: ");
+//        System.out.println(dragEvent.getGestureSource()); // null
+//        System.out.println(dragEvent.getSource()); // TableView[id=pathTable, styleClass=table-view]
+//        System.out.println(dragEvent.getEventType()); // DRAG_OVER
+//        System.out.println(dragEvent.getDragboard().getFiles().toString()); // [D:\!Learning\GeekUnivers\Java5\Lesson3\netty-servers\netty-servers\1.txt]
+//        System.out.println(dragEvent.getDragboard().getContentTypes()); // [[FileName], [DisableDragText], [application/x-java-file-list, java.file-list], [IsComputingImage], [DragImageBits], [ComputedDragImage], [FileNameW], [DragSourceHelperFlags], [text/uri-list], [IsShowingLayered], [DropDescription], [IsShowingText], [Shell IDList Array], [InShellDragLoop], [UsingDefaultDragImage], [DragWindow]]
+//        System.out.println(dragEvent.getAcceptingObject().toString());
+        if (dragEvent.getGestureSource() != dragEvent.getSource() && dragEvent.getDragboard().hasFiles()){
+            dragEvent.acceptTransferModes(TransferMode.COPY_OR_MOVE);
+        }
+        dragEvent.consume();
+    }
 
+    // Бросание объекта
+    public void setOnDragDropped(DragEvent dragEvent) {
+        Dragboard db = dragEvent.getDragboard();
+        boolean success = false;
+        if (db.hasFiles()) {
+//            dropped.setText(db.getFiles().toString());
+            String fileName = db.getFiles().toString();
+            System.out.println("Файл получен: " + db.getFiles().toString());
+            // TODO: Прикрутить отображение и отправку файла
 
+            success = true;
+        }
+        dragEvent.setDropCompleted(success);
+        dragEvent.consume();
+    }
 }

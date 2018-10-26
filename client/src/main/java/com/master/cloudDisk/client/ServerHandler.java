@@ -28,7 +28,7 @@ public class ServerHandler extends Thread implements Runnable, IServerHandler {
     private static final String DEFAULT_HOST = "localhost";
     private static final Integer DEFAULT_PORT = 8189;
     // Instance
-    private static ServerHandler instance;
+    private static IServerHandler instance;
     // Network config
     private String host;
     private Integer port;
@@ -101,11 +101,14 @@ public class ServerHandler extends Thread implements Runnable, IServerHandler {
         if(!isConnected()) {
             start();
             try {
-                Thread.currentThread().sleep(1000);
+                Thread.currentThread().sleep(2000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
+//        else {
+//            System.out.println("It's conected!");
+//        }
     }
 
     public void run(){

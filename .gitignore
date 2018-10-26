@@ -1,5 +1,8 @@
 .idea
 .idea/
 client/target/
+client/target
 common/target/
+common/target
 server/target/
+server/target
