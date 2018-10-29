@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.UnsupportedEncodingException;
+import java.nio.file.Paths;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -17,7 +18,7 @@ public class Client extends Application implements IClient {
 
     private IServerHandler serverHandler;
     private Controller controller;
-    private String mainPath;
+    private static ClientPathControl pathControl;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -29,8 +30,14 @@ public class Client extends Application implements IClient {
         try{
             Parent root = (Parent)loader.load();
             controller = loader.getController();
+            controller.setClient(this);
+//            Paths.get("D:\\!Learning\\GeekUnivers\\Java5\\Lesson3\\netty-servers\\netty-servers\\1.txt")
+//            controller.getPathTree().getRoot().setValue(getPathControl().getRootPath().getFileName().toString());
+            controller.setRootPath(getPathControl().getRootPath());
+//            controller.fillTableViewFromPath(Paths.get("D:\\!Learning\\GeekUnivers\\Java5\\Lesson3\\netty-servers\\netty-servers"));
+//            controller.fillTableViewFromPath(Paths.get("D:\\!Learning\\GeekUnivers\\Java5\\Lesson3\\netty-servers\\netty-servers"));
 //            controller.setStage(mainStage);
-            primaryStage.setTitle("Cloud Disk");
+//            primaryStage.setTitle("Cloud Disk");
             primaryStage.setScene(new Scene(root, 700, 500));
             primaryStage.show();
         } catch(Exception e){
@@ -43,11 +50,20 @@ public class Client extends Application implements IClient {
         // Клиент на Netty Lesson3(1.53)
     }
 
-    public String getMainPath(){
-        if(null == mainPath){
-            mainPath = System.getProperty("user.home") + "\\" + MAIN_PATH_NAME;
+
+    public static String getMainPathName(){
+        return MAIN_PATH_NAME;
+    }
+
+    public static String getMainPath(){
+        return System.getProperty("user.home") + "\\" + MAIN_PATH_NAME;
+    }
+
+    public static ClientPathControl getPathControl(){
+        if(null == pathControl){
+            pathControl = new ClientPathControl(getMainPath());
         }
-        return mainPath;
+        return pathControl;
     }
 
     @Override

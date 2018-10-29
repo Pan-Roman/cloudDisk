@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
@@ -14,15 +15,18 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.master.cloudDisk.client.Controller">
    <left>
-      <TreeView fx:id="pathTree" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <TreeView fx:id="pathTree" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TreeView>
    </left>
    <center>
-      <TableView fx:id="pathTable" onDragDropped="#setOnDragDropped" onDragOver="#setOnDragOver" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="pathTable" onDragDropped="#setOnDragDropped" onDragOver="#setOnDragOver" onMouseClicked="#onMouseClicked" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn prefWidth="75.0" text="Name" />
-          <TableColumn prefWidth="75.0" text="Size" />
-            <TableColumn prefWidth="75.0" text="Type" />
-            <TableColumn prefWidth="75.0" text="Date" />
+          <TableColumn fx:id="pathTableColumnName" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="pathTableColumnSize" prefWidth="75.0" text="Size" />
+            <TableColumn fx:id="pathTableColumnType" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="pathTableColumnDate" prefWidth="75.0" text="Date" />
         </columns>
       </TableView>
    </center>

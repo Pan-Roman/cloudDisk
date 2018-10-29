@@ -1,10 +1,6 @@
-package com.master.cloudDisk.common;
+package com.master.cloudDisk.common.commands;
 
-import com.master.cloudDisk.common.Interfaces.ICommand;
-
-import java.io.Serializable;
-
-public class AuthCommand implements ICommand, Serializable {
+public class AuthCommand extends Command {
     public final static String salt = "SuPer_SaLt!";
     private String login;
     private String password;
@@ -14,9 +10,9 @@ public class AuthCommand implements ICommand, Serializable {
         this.password = password;
     }
 
-    public void execute() {
+//    public void execute() {
 //        System.out.println("Get AUTH! Logiin: " + login + "Pass: " + password);
-    }
+//    }
 
     public String getLogin() {
         return login;

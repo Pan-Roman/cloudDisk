@@ -12,7 +12,7 @@ import io.netty.handler.codec.serialization.ClassResolvers;
 import io.netty.handler.codec.serialization.ObjectDecoder;
 import io.netty.handler.codec.serialization.ObjectEncoder;
 
-import static com.master.cloudDisk.common.Command.MAX_OBJ_SIZE;
+import static com.master.cloudDisk.common.commands.Command.MAX_OBJ_SIZE;
 
 public class Net extends Thread implements Runnable{
     private static Net instance = new Net();

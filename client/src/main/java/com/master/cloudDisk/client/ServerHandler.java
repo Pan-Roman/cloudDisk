@@ -2,8 +2,9 @@ package com.master.cloudDisk.client;
 
 import com.master.cloudDisk.client.Interfaces.IClient;
 import com.master.cloudDisk.client.Interfaces.IServerHandler;
+import com.master.cloudDisk.common.commands.AuthCommand;
 import com.master.cloudDisk.common.Interfaces.ICommand;
-import com.master.cloudDisk.common.WriteFileCommand;
+import com.master.cloudDisk.common.commands.UploadFileCommand;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufAllocator;
@@ -19,9 +20,14 @@ import io.netty.handler.codec.serialization.ClassResolvers;
 import io.netty.handler.codec.serialization.ObjectDecoder;
 import io.netty.handler.codec.serialization.ObjectEncoder;
 
+import java.io.IOException;
 import java.net.InetSocketAddress;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 
-import static com.master.cloudDisk.common.Command.MAX_OBJ_SIZE;
+import static com.master.cloudDisk.common.commands.Command.MAX_OBJ_SIZE;
 
 public class ServerHandler extends Thread implements Runnable, IServerHandler {
     private IClient client;
@@ -42,7 +48,63 @@ public class ServerHandler extends Thread implements Runnable, IServerHandler {
         return instance;
     }
 
-    public boolean sendCommand(ICommand command) {
+    @Override
+    public void auth(String login, String pass) {
+        ICommand message = new AuthCommand(login, pass);
+        System.out.println("Send Auth mess...");
+        sendCommand(message);
+    }
+
+    @Override
+    public ArrayList<Path> getPathList(Path path){
+
+        return null;
+    }
+
+    @Override
+    public boolean deletePath(Path path) {
+
+        return false;
+    }
+
+    @Override
+    public boolean sendPath(Path path) {
+        connect();
+//        Path path = Paths.get(fileName);
+//        ByteBuf buf = path
+        String fileName = Client.getPathControl().getCurrentPath() + "\\" + path.getFileName().toString();
+//        FileChannel fc = PathControl.getChannelFromFile(fileName);
+
+
+
+//        System.out.println("Не реализована отправка файла!");
+
+        // Читаем файл
+        // Работа с файлами через nio - Lesson 2 (50:00)
+        /// ...
+        // TODO: Send File
+//        byte [] arr = fileName.getBytes(); // Сюда надо запихать набор байт из файла а не байты имени файла
+        byte [] arr = new byte[0];
+        try {
+            arr = Files.readAllBytes(path);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+//        ByteBufAllocator al = new PooledByteBufAllocator();
+//        ByteBuf bb = al.buffer(arr.length);
+//        bb.writeBytes(arr);
+//        bb.
+        this.sendCommand(new UploadFileCommand(fileName, arr));
+        return false;
+    }
+
+    @Override
+    public void setClient(IClient _client) {
+        client = _client;
+    }
+
+    private boolean sendCommand(ICommand command) {
         connect();
         try {
             ChannelFuture cf = getCurrentChannel().writeAndFlush(command);
@@ -52,29 +114,8 @@ public class ServerHandler extends Thread implements Runnable, IServerHandler {
         return true;
     }
 
-    public boolean sendFile(String fileName) {
-        connect();
-        System.out.println("Не реализована отправка файла!");
-
-        // Читаем файл
-        // Работа с файлами через nio - Lesson 2 (50:00)
-        /// ...
-        // TODO: Send File
-        byte [] arr = fileName.getBytes(); // Сюда надо запихать набор байт из файла а не байты имени файла
-
-        ByteBufAllocator al = new PooledByteBufAllocator();
-        ByteBuf bb = al.buffer(arr.length);
-        bb.writeBytes(arr);
-        this.sendCommand(new WriteFileCommand(fileName, bb));
-        return false;
-    }
-
     public Channel getCurrentChannel() {
         return currentChannel;
-    }
-
-    public void setClient(IClient _client) {
-        client = _client;
     }
 
     public void setHost(String host) {
@@ -89,12 +130,6 @@ public class ServerHandler extends Thread implements Runnable, IServerHandler {
         super("ServerHandler");
         this.host = DEFAULT_HOST;
         this.port = DEFAULT_PORT;
-//        start();
-//        try {
-//            Thread.currentThread().sleep(1000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
     }
 
     private void connect(){

@@ -1,6 +1,6 @@
 package com.master.cloudDisk.server;
 
-import com.master.cloudDisk.common.AuthCommand;
+import com.master.cloudDisk.common.commands.AuthCommand;
 import com.master.cloudDisk.common.ServerAnswers;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
